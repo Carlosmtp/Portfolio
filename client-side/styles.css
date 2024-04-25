@@ -96,7 +96,7 @@ header {
 
 /*imagen del logo*/
 .logo-container img {
-    min-height: fit-content;
+    min-width:max-content;
     border-radius: 100%;
     height: 80px;
     margin-right: 25px;
@@ -759,6 +759,9 @@ form textarea::placeholder {
     .contenido-habilidades {
         display: block;
         flex-direction: column;
+    }
+    .contenido-banner{
+        padding: 0;
     }
     .contenido-banner li {
         font-size: 95%;
