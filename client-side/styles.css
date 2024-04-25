@@ -397,6 +397,11 @@ footer p {
     justify-content: space-between;
     text-align: center;
 }
+
+.contenido-habilidades i{
+    overflow: hidden;
+}
+
 .contenido-habilidades div {
     flex: 1;
     margin: 20px;
