@@ -219,7 +219,7 @@ footer p {
 /*banner de la página de inicio*/
 #banner {
     margin-top: 100px;
-    padding: 0 50px;
+    padding: 0 30px;
     background-image: url(https://images.unsplash.com/photo-1547394765-185e1e68f34e?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     height: 50vh;
     background-size: cover;
@@ -313,7 +313,6 @@ footer p {
 .tarjeta {
     position: relative;
     background-color: #f0f0f0;
-    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     transition: 0.4s;
@@ -423,7 +422,7 @@ footer p {
 }
 
 .contenido-habilidades {
-    padding: 30px 30px 50px 50px;
+    padding: 5% 5%;
     display: flex;
     justify-content: space-between;
     text-align: center;
@@ -760,15 +759,10 @@ form textarea::placeholder {
         display: block;
         flex-direction: column;
     }
-    .contenido-banner{
-        padding: 0;
-    }
-    .contenido-banner li {
-        font-size: 95%;
-    }
+
     
     .contenido-banner h3 {
-        font-size: 95%;
+        font-size: 120%;
     }
     .boton-banner {
         font-size: 95%;
