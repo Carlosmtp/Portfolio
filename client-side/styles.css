@@ -96,7 +96,7 @@ header {
 
 /*imagen del logo*/
 .logo-container img {
-    min-width:max-content;
+    min-width: max-content;
     border-radius: 100%;
     height: 80px;
     margin-right: 25px;
@@ -760,19 +760,20 @@ form textarea::placeholder {
         flex-direction: column;
     }
 
-    
+
     .contenido-banner h3 {
         font-size: 120%;
     }
+
     .boton-banner {
         font-size: 95%;
     }
-    
+
     .boton-banner .material-symbols-outlined {
         margin-right: 5px;
         font-size: 160%;
     }
-    
+
 }
 
 /************************************** ANIMACIONES ***************************************/
