@@ -311,6 +311,7 @@ footer p {
 /************************************** TARJETAS **************************************/
 /*estilo general para las tarjetas*/
 .tarjeta {
+    padding: 5%;
     position: relative;
     background-color: #f0f0f0;
     border-radius: 8px;
@@ -321,6 +322,8 @@ footer p {
     flex-direction: column;
     overflow: hidden;
 }
+
+
 
 /*tarjetas al hacer hover*/
 .tarjeta:hover {
