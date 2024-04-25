@@ -8,18 +8,19 @@
 
 /************************************** BODY **************************************/
 /*clase auxiliar para hacer opaco el body*/
+
+
 .body-back::before {
     overflow: hidden;
-    position: absolute;
+    position: fixed;
     content: '';
     backdrop-filter: blur(5px);
     background: rgba(0, 0, 0, 0.69);
-    position: absolute;
     width: 100%;
     height: 100%;
-    left: 0;
     z-index: 101;
 }
+
 
 /*spinner de carga*/
 #spinner {
@@ -52,12 +53,14 @@
     transition: 0.8s;
     z-index: 1000;
 }
-#cerrar-modal{
+
+#cerrar-modal {
     position: absolute;
     top: 10px;
     right: 10px;
 }
-#cerrar-modal:hover{
+
+#cerrar-modal:hover {
     cursor: pointer;
     color: #004878;
 }
@@ -68,7 +71,7 @@ header {
     position: fixed;
     left: 0px;
     right: 0px;
-    background: linear-gradient(89deg,#020024,#090979,#016e84);
+    background: linear-gradient(89deg, #020024, #090979, #016e84);
     background-size: 180% 180%;
     min-height: auto;
     height: 100px;
@@ -77,7 +80,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    animation:header-scroll linear both;
+    animation: header-scroll linear both;
     animation-timeline: scroll(root);
     animation-range: 0 500px;
     z-index: 100;
@@ -100,6 +103,7 @@ header {
     animation-timeline: scroll(root);
     animation-range: 0 500px;
 }
+
 /*imagen del logo al hacer hover*/
 #foto-perfil:hover {
     opacity: 50%;
@@ -112,10 +116,8 @@ header {
 #index-header .logo {
     text-transform: uppercase;
     font-optical-sizing: auto;
-    font-weight: 700;
     font-style: normal;
     color: rgba(255, 255, 255, 0);
-    font-weight: 200;
     animation: logo-scroll linear both;
     animation-timeline: scroll(root);
     animation-range: 0 500px;
@@ -180,23 +182,25 @@ footer {
     left: 0;
     width: 100%;
 }
+
 /*contenedor de iconos del footer*/
-.redes-sociales{
+.redes-sociales {
     justify-content: center;
     display: flex;
     text-align: center;
 }
 
 /*iconos del footer*/
-footer .footicon{
+footer .footicon {
     font-size: 40px;
     overflow: hidden;
     margin: 10px;
     color: #fff;
     transition: 0.4s;
 }
+
 /*iconos del footer al hacer hover*/
-footer .footicon:hover{
+footer .footicon:hover {
     color: #a5a3c8;
     scale: 1.08;
 }
@@ -222,6 +226,7 @@ footer p {
     animation: fadeIn 2s ease forwards;
     cursor: default;
 }
+
 /*máscara de blur para el banner de la página de inicio*/
 #banner::before {
     content: '';
@@ -247,7 +252,7 @@ footer p {
 /*máscara de franja para el banner de perfil*/
 #banner-perfil::before {
     content: '';
-    background: linear-gradient(89deg,#020024,#090979,#016e84);
+    background: linear-gradient(89deg, #020024, #090979, #016e84);
     animation: gradient-animation 1s ease-in-out infinite alternate;
     position: absolute;
     width: 100%;
@@ -257,27 +262,31 @@ footer p {
 
 
 /*margen para el contenido del banner de perfil*/
-#banner-perfil .contenido-banner{
+#banner-perfil .contenido-banner {
     padding-left: 300px;
 }
 
 /*elementos generales para los dos banners*/
-.contenido-banner li{
+.contenido-banner li {
     padding-top: 16px;
     font-size: 16px;
 }
+
 .contenido-banner h3 {
     padding-left: 20px;
     font-size: 25px;
     font-weight: 100;
 }
+
 .contenido-banner h3 span {
     font-weight: 600;
 }
-.contenido-banner h3 b{
+
+.contenido-banner h3 b {
     font-weight: 1000;
     background: #020024;
 }
+
 .contenido-banner {
     position: relative;
     color: #fff;
@@ -285,6 +294,17 @@ footer p {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+/* Estilos específicos para Firefox por no compatibilidad con animación de scroll*/
+@supports (-moz-appearance:none) {
+    #banner {
+        margin-top: 50px;
+    }
+
+    #banner-perfil {
+        margin-top: 50px;
+    }
 }
 
 /************************************** TARJETAS **************************************/
@@ -314,24 +334,29 @@ footer p {
 .tarjeta img {
     max-width: 100%;
     border-radius: 8px;
-  }
+}
+
 .tarjeta h2 {
     font-size: 1.2rem;
     margin-top: 10px;
 }
+
 .tarjeta h2:hover {
     cursor: default;
 }
+
 .tarjeta p {
     font-weight: 500;
     font-size: 0.8rem;
     color: #555;
     margin-bottom: auto;
-  }
-  .tarjeta p:hover {
+}
+
+.tarjeta p:hover {
     cursor: default;
 }
-.tarjeta .boton{
+
+.tarjeta .boton {
     position: relative;
     margin-top: 20px;
 }
@@ -354,6 +379,7 @@ footer p {
     margin-left: auto;
     margin-right: auto;
 }
+
 .boton:hover {
     background: #090979;
     color: #fff;
@@ -362,7 +388,7 @@ footer p {
 /*botón del banner*/
 .boton-banner {
     font-size: 18px;
-    display:flex;
+    display: flex;
     text-decoration: none;
     color: #fff;
     border: 2px solid #8ca9fa;
@@ -374,11 +400,13 @@ footer p {
     align-items: center;
     transition: 0.4s;
 }
-.boton-banner .material-symbols-outlined{
+
+.boton-banner .material-symbols-outlined {
     margin-right: 20px;
     font-size: 30px;
     overflow: hidden;
 }
+
 .boton-banner:hover {
     box-shadow: 0 0 20px #8ca9fa;
     background: #8ca9fa;
@@ -392,6 +420,7 @@ footer p {
     background: #ece5f5;
     animation: fadeIn 2s ease forwards;
 }
+
 .contenido-habilidades {
     padding: 30px 30px 50px 50px;
     display: flex;
@@ -399,7 +428,7 @@ footer p {
     text-align: center;
 }
 
-.contenido-habilidades i{
+.contenido-habilidades i {
     overflow: hidden;
 }
 
@@ -411,29 +440,36 @@ footer p {
     border-right: 2px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
     background-color: #ffffff;
-    color: #021857; 
+    color: #021857;
 }
+
 #icono-final {
     border: none;
 }
+
 .contenido-habilidades .material-symbols-outlined {
     color: #021857;
     font-size: 35px;
-    transition: color 0.3s ease; /* Agrega transición */
+    transition: color 0.3s ease;
+    /* Agrega transición */
 }
+
 .contenido-habilidades div h3 {
     font-style: italic;
     color: #021857;
     font-size: 20px;
     font-weight: 1000;
     margin: 10px 0px;
-    transition: color 0.3s ease; /* Agrega transición */
+    transition: color 0.3s ease;
+    /* Agrega transición */
 }
+
 .contenido-habilidades div p {
-    color:  #021857;
+    color: #021857;
     font-weight: 500;
     font-size: 15px;
-    transition: color 0.3s ease; /* Agrega transición */
+    transition: color 0.3s ease;
+    /* Agrega transición */
 }
 
 /************************************** TESTIMONIOS **************************************/
@@ -442,6 +478,7 @@ footer p {
     padding: 50px 50px;
     animation: fadeIn 2s ease forwards;
 }
+
 #testimonios .testimonios-container {
     display: flex;
     text-align: center;
@@ -453,6 +490,7 @@ footer p {
     width: 150px;
     object-fit: cover;
 }
+
 #testimonios div {
     padding: 30px 30px;
 }
@@ -461,22 +499,25 @@ footer p {
     color: #4d4d5c;
     font-size: 20px;
 }
+
 #testimonios div h5 {
     margin-bottom: 10px;
     color: #4d4d5c;
 }
+
 #testimonios div p {
     color: #4d4d5c87;
     font-size: 16px;
 }
 
 .testimonio {
-    background:whitesmoke;
+    background: whitesmoke;
     margin: 15px;
     border-radius: 15px;
 }
+
 .testimonio:hover {
-    background:rgb(221, 228, 238);
+    background: rgb(221, 228, 238);
 }
 
 /************************************** PROYECTOS **************************************/
@@ -497,35 +538,39 @@ footer p {
     background: #ffffff;
     animation: fadeIn 2s ease forwards;
 }
-#perfil .contenido-perfil{
+
+#perfil .contenido-perfil {
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 4%;
     margin-right: 4%;
 }
-#perfil .contenido-perfil p{
+
+#perfil .contenido-perfil p {
     padding-top: 15px;
     font-weight: 500;
 }
 
 /*linea de tiempo de experiencia*/
-.experiencia{
+.experiencia {
     margin: 50px 0;
     padding-left: 15%;
     padding-right: 15%;
 }
-.lista-experiencia{
+
+.lista-experiencia {
     border-left: 2px solid #021857;
     position: relative;
     padding-left: 20px;
     padding-bottom: 40px;
     cursor: default;
 }
-.lista-experiencia li{
+
+.lista-experiencia li {
     padding-top: 25px;
 }
 
-.lista-experiencia p{
+.lista-experiencia p {
     padding-top: 15px;
 }
 
@@ -565,13 +610,16 @@ footer p {
 #contacto-form {
     max-width: 80%;
 }
+
 .datos-form {
     display: flex;
 }
+
 .datos-form div {
     padding: 10px;
     flex: 1;
 }
+
 form input,
 form textarea {
     background: #ece5f5;
@@ -584,10 +632,12 @@ form textarea {
     width: calc(100% - 20px);
     box-sizing: border-box;
 }
+
 form input::placeholder,
 form textarea::placeholder {
     color: #9a9a9a;
 }
+
 .mensaje {
     display: flex;
     flex-direction: column;
@@ -601,33 +651,39 @@ form textarea::placeholder {
     #testimonios .testimonios-container {
         flex-direction: column;
     }
+
     #banner-perfil::before {
         content: '';
-        background: linear-gradient(89deg,#020024,#090979,#016e84);
+        background: linear-gradient(89deg, #020024, #090979, #016e84);
         animation: gradient-animation 1s ease-in-out infinite alternate;
         position: absolute;
         width: 100%;
         height: 50vh;
         left: 270px;
     }
-    #banner-perfil .contenido-banner{
+
+    #banner-perfil .contenido-banner {
         padding-left: 250px;
     }
-    .menu{
+
+    .menu {
         font-size: 90%;
     }
 }
+
 @media screen and (max-width: 768px) {
+
     /* HEADER */
     .mostrar-menu,
     .esconder-menu {
         display: flex;
     }
+
     .menu {
         position: fixed;
         width: 100%;
         height: 100vh;
-        background: linear-gradient(89deg,#020024,#090979,#016e84);
+        background: linear-gradient(89deg, #020024, #090979, #016e84);
         background-size: 180% 180%;
         right: -100%;
         top: 0;
@@ -636,16 +692,19 @@ form textarea::placeholder {
         z-index: 100;
         transition: 0.8s;
     }
+
     .menu a {
         display: block;
         padding: 20px;
     }
+
     .esconder-menu {
         position: absolute;
         top: 40px;
         right: 40px;
     }
-    #check:checked ~ .menu {
+
+    #check:checked~.menu {
         right: 0;
     }
 
@@ -653,11 +712,12 @@ form textarea::placeholder {
         margin-top: 100px;
         padding: 0 50px;
         background-image: url(img/acerca.jpg);
-        background-size:cover;
+        background-size: cover;
         background-position-y: bottom;
         height: 50vh;
         animation: fadeIn 2s ease forwards;
     }
+
     /*máscara de franja para el banner de perfil*/
     #banner-perfil::before {
         content: '';
@@ -669,9 +729,9 @@ form textarea::placeholder {
         height: 50vh;
         left: 0;
     }
-    
+
     /*margen para el contenido del banner de perfil*/
-    #banner-perfil .contenido-banner{
+    #banner-perfil .contenido-banner {
         padding-left: 0;
     }
 
@@ -704,41 +764,50 @@ form textarea::placeholder {
 /* animación de entrada */
 @keyframes fadeIn {
     from {
-      opacity: 0;
-      transform: translateY(-20px);
+        opacity: 0;
+        transform: translateY(-20px);
     }
+
     to {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
+}
 
 /* animación de scroll para el header y los elementos del header al hacer scroll */
 @keyframes header-scroll {
-    to{
+    to {
         height: 50px;
         font-size: 70%;
         background-color: #020024;
     }
 }
+
 @keyframes logo-img-scroll {
-    to{
+    to {
         height: 30px;
     }
 }
+
 @keyframes logo-scroll {
-    to{
+    to {
         color: rgba(255, 255, 255, 100);
     }
 }
+
 @keyframes menu-scroll {
-    to{
+    to {
         font-size: 30px;
     }
 }
 
 /*animación del spinner*/
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
