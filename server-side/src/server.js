@@ -6,7 +6,7 @@ const express = require('express');
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(cors({origin: 'http://localhost'}));
+app.use(cors({origin: '*'}));
 
 app.post('/enviar-correo', (req, res) => {
     const { nombre, email, mensaje } = req.body;

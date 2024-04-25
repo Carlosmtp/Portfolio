@@ -4,7 +4,7 @@ document.getElementById('formulario-contacto').addEventListener('submit', functi
     event.preventDefault();
     var formData = new URLSearchParams(new FormData(this));
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://localhost:3000/enviar-correo', true);
+    xhr.open('POST', 'https://portfolio-y4ke.onrender.com/enviar-correo', true);
     xhr.onload = function() {
         document.getElementById('spinner').style.display = 'none';
         if (xhr.status === 200) {
