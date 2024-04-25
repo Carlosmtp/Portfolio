@@ -24,6 +24,12 @@ document.getElementById('formulario-contacto').addEventListener('submit', functi
 });
 
 document.getElementById('cerrar-modal').addEventListener('click', function(event) {
+    var respuesta = document.getElementById('respuesta').innerHTML;
+    if(respuesta == 'Correo electrónico enviado correctamente'){
+        document.getElementById('nombre').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('mensaje').value = '';
+    }
     document.body.classList.remove("body-back");
-    document.getElementById('respuesta-modal').style.top = '-100%'
+    document.getElementById('respuesta-modal').style.top = '-100%';
 });
