@@ -298,6 +298,7 @@ footer p {
     animation: fadeIn 2s ease forwards;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 /*tarjetas al hacer hover*/
@@ -366,7 +367,7 @@ footer p {
     border: 2px solid #8ca9fa;
     margin-top: 30px;
     margin-left: 20px;
-    padding: 20px 20px;
+    padding: 30px 30px;
     align-self: baseline;
     justify-content: center;
     align-items: center;
@@ -375,6 +376,7 @@ footer p {
 .boton-banner .material-symbols-outlined{
     margin-right: 20px;
     font-size: 35px;
+    overflow: hidden;
 }
 .boton-banner:hover {
     box-shadow: 0 0 20px #8ca9fa;
@@ -606,7 +608,7 @@ form textarea::placeholder {
         padding-left: 250px;
     }
     .menu{
-        display: flex;
+        font-size: 90%;
     }
 }
 @media screen and (max-width: 768px) {
