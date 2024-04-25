@@ -96,7 +96,7 @@ header {
 
 /*imagen del logo*/
 .logo-container img {
-    min-width: max-content;
+    
     border-radius: 100%;
     height: 80px;
     margin-right: 25px;
@@ -299,6 +299,21 @@ footer p {
 
 /* Estilos específicos para Firefox por no compatibilidad con animación de scroll*/
 @supports (-moz-appearance:none) {
+
+    .logo-container {
+        display:;
+    }
+    .logo-container img {
+        display: flexbox;
+        position: relative;
+        background: #4d4d5c;
+    }
+
+    .logo-container h2 {
+        padding-left: 60px;
+        position: absolute;
+    }
+        
     #banner {
         margin-top: 50px;
     }
@@ -312,6 +327,7 @@ footer p {
 /*estilo general para las tarjetas*/
 .tarjeta {
     padding: 5%;
+    margin: 5%;
     position: relative;
     background-color: #f0f0f0;
     border-radius: 8px;
