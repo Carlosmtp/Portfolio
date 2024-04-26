@@ -23,24 +23,36 @@
 
 
 /*spinner de carga*/
-#spinner {
-    border: 6px solid #8ca9fa;
-    border-top: 6px solid #004878;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    animation: spin 2s linear infinite;
-    position: absolute;
-    transform: translate(-50%, -50%);
+#spinner-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
     left: 50%;
     top: 50%;
-    z-index: 102;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 101;
+}
+
+#spinner {
+    margin: 0;
+    padding: 0;
+    border: 6px solid #8ca9fa;
+    border-top: 6px solid #004878;
+    border-radius: 100%;
+    width: 30px; /* Ancho en píxeles */
+    height: 30px; /* Alto en píxeles */
+    animation: spin 2s linear infinite;
+    position: absolute;  
     display: none;
 }
 
+
 /*modal para dar respuestas*/
 #respuesta-modal {
-    position: absolute;
+    position: fixed;
     background: #ece5f5;
     padding: 50px;
     border: 5px solid #090979;
@@ -51,7 +63,7 @@
     top: -100%;
     transform: translate(-50%, -50%);
     transition: 0.8s;
-    z-index: 1000;
+    z-index: 102;    
 }
 
 #cerrar-modal {
@@ -97,7 +109,7 @@ header {
 /*imagen del logo*/
 .logo-container img {
     border-radius: 100%;
-    height: 80px;
+    height: 60px;
     margin-right: 25px;
     animation: logo-img-scroll linear both;
     animation-timeline: scroll(root);
@@ -605,9 +617,8 @@ footer p {
 
 /************************************** CONTACTO **************************************/
 /*página de contacto*/
-#contacto {
+#contacto, #info-contacto {
     background: #f2f4f5;
-    margin-top: 120px;
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 5%;
@@ -617,7 +628,7 @@ footer p {
     animation: fadeIn 2s ease forwards;
 }
 
-#contacto h4 {
+#contacto h4, #info-contacto h4 {
     margin-top: 15px;
     text-align: center;
     font-size: 25px;
@@ -661,6 +672,26 @@ form textarea::placeholder {
     flex-direction: column;
     padding: 10px;
 }
+
+.medio-contacto {
+    font-size: 40px;
+    display: flex;
+}
+
+.medio-contacto p {
+    padding-left: 10px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    padding-left: 5px;
+}
+
+.medio-contacto a {
+    text-decoration: none;
+}
+
+
+
+
 
 /*****************************************************************************************/
 /************************************** RESPONSIVE **************************************/
@@ -712,6 +743,7 @@ form textarea::placeholder {
     }
 
     .menu a {
+        font-size: 20px;
         display: block;
         padding: 20px;
     }
@@ -770,6 +802,7 @@ form textarea::placeholder {
 }
 
 @media screen and (max-width: 576px) {
+
     .contenido-habilidades {
         display: block;
         flex-direction: column;

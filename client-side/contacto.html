@@ -17,8 +17,40 @@
 
 <body>
     <header></header>
+    <section id="proyectos">
+        <div class="tarjeta">
+            <div class="medio-contacto">
+                <iconify-icon icon="bi:linkedin"></iconify-icon>
+                <p>LinkedIn</p>
+            </div>
+            <a class="boton" href="https://www.linkedin.com/in/carlosmtp/" target="_blank">@carlosmtp</a>
+        </div>
+        <div class="tarjeta">
+            <div class="medio-contacto">
+                <iconify-icon icon="bi:twitter-x" class="footicon"></iconify-icon>
+                <p>X (Twitter)</p>
+            </div>
+            <a class="boton" href="https://twitter.com/carlost__tovar/" target="_blank">@carlost__tovar</a>
+
+        </div>
+        <div class="tarjeta">
+            <div class="medio-contacto">
+                <iconify-icon icon="bi:instagram"></iconify-icon>
+                <p>Instagram</p>
+            </div>
+            <a class="boton" href="https://www.instagram.com/carlost__t/" target="_blank">@carlost__t</a>
+        </div>
+        <div class="tarjeta">
+            <div class="medio-contacto">
+                <iconify-icon icon="bi:telegram"></iconify-icon>
+                <p>Telegram</p </div>
+            </div>
+            <a class="boton" href="https://t.me/carlost_tovar" target="_blank">@carlost_tovar</a>
+        </div>
+    </div>
+</section>
     <section id="contacto">
-        <h4>Contáctame</h4>
+        <h4>O envíame un correo electrónico:</h4>
         <form id="formulario-contacto" class="form">
             <div class="datos-form">
                 <div class="nombre">
@@ -37,11 +69,13 @@
             <button type="submit" class="boton">Enviar mensaje</button>
         </form>
     </section>
+    <div id="spinner-container">
+        <div id="spinner"></div>
+    </div>
     <div id="respuesta-modal">
-        <i class="fas fa-times" id="cerrar-modal"></i>
+        <iconify-icon icon="material-symbols:close" id="cerrar-modal"></iconify-icon>
         <p id="respuesta">Mensaje Enviado</p>
     </div>
-    <div id="spinner"></div>
     <footer></footer>
     <script src="persistent_components.js"></script>
     <script src="contacto.js"></script>

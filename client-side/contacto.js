@@ -1,5 +1,6 @@
 document.getElementById('formulario-contacto').addEventListener('submit', function(event) {
     document.getElementById('spinner').style.display = 'block';
+    document.getElementById('spinner-container').style.display = 'block';
     document.body.classList.add("body-back");
     event.preventDefault();
     var formData = new URLSearchParams(new FormData(this));
@@ -7,6 +8,8 @@ document.getElementById('formulario-contacto').addEventListener('submit', functi
     xhr.open('POST', 'https://portfolio-y4ke.onrender.com/enviar-correo', true);
     xhr.onload = function() {
         document.getElementById('spinner').style.display = 'none';
+        document.getElementById('spinner-container').style.display = 'none';
+
         if (xhr.status === 200) {
             document.getElementById('respuesta').innerHTML = xhr.responseText;
             document.getElementById('respuesta-modal').style.top = '50%'
@@ -17,6 +20,7 @@ document.getElementById('formulario-contacto').addEventListener('submit', functi
     };
     xhr.onerror = function() {
         document.getElementById('spinner').style.display = 'none'
+        document.getElementById('spinner-container').style.display = 'none';
         document.getElementById('respuesta').innerHTML = 'Error al enviar el mensaje.';
         document.getElementById('respuesta-modal').style.top = '50%'
     };
